@@ -27,20 +27,28 @@ To build an end-to-end ML pipeline that:
 ## 📁 Project Structure
 
 ```
-
 customer-churn-predictor/
 │
-├── data/
-│   └── customer\_churn.csv         # Dataset
+├── 📁 data/
+│   └── telco_churn.csv              # Raw dataset
 │
-├── src/
-│   ├── preprocessing.py           # Data cleaning, encoding, feature selection
-│   ├── train\_model.py             # Model training and evaluation logic
-│   └── visualize.py               # Graphs and confusion matrix
+├── 📁 src/
+│   ├── data_loader.py               # Load and clean dataset
+│   ├── preprocessing.py             # Encode and transform data
+│   ├── model.py                     # Train and evaluate ML models
+│   └── utils.py                     # Helper functions (metrics, plots)
 │
-├── main.py                        # Pipeline controller
-├── requirements.txt               # All Python dependencies
-└── README.md                      # You're reading this now
+├── 📁 models/
+│   └── churn_model.pkl              # Saved trained model (after export)
+│
+├── 📁 outputs/
+│   ├── plots/                       # Confusion matrices, feature importance
+│   └── metrics.txt                  # Accuracy scores, etc.
+│
+├── 📄 requirements.txt              # List of all dependencies
+├── 📄 README.md                     # Project overview and instructions
+└── 📄 churn_pipeline.py             # Main pipeline script (end-to-end)
+
 
 ````
 
